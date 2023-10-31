@@ -104,6 +104,11 @@
         }        
     }
 
+    function storages(){
+        sessionStorage.setItem("is_rtl_active" , "active") , 
+        sessionStorage.setItem("is_visited" , "light-mode-switch") 
+    }
+
     function e() {
         document.webkitIsFullScreen || document.mozFullScreen || document.msFullscreenElement || (console.log("pressed"), n("body").removeClass("fullscreen-enable"));
     }
@@ -195,7 +200,12 @@
                     n("#" + a).prop("checked", !0), t(a)
                 ) 
             :
-                sessionStorage.setItem("is_visited", "light-mode-switch")),
+            storages()
+      
+                
+              
+            
+        ),
 
         n("#light-mode-switch, #dark-mode-switch, #rtl-mode-switch").on("change", function (e) {
             t(e.target.id);
