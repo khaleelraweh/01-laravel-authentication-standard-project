@@ -1,6 +1,8 @@
 @extends('layouts.app')
 
 @section('content')    
+
+
   <!-- HERO SECTION-->
   <section class="hero pb-3 bg-cover bg-center d-flex align-items-center" style="background: url('{{asset("frontend/img/hero-banner-alt.jpg")}}')">
     <div class="container py-5">

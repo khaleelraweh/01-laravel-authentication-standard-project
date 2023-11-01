@@ -3,7 +3,7 @@
         <div class="d-flex">
             <!-- LOGO -->
             <div class="navbar-brand-box">
-                <a href="{{route('backend.index2')}}" class="logo logo-dark">
+                <a href="{{route('admin.index2')}}" class="logo logo-dark">
                     <span class="logo-sm">
                         <img src="{{asset('backend/images/logo-sm.png')}}" alt="logo-sm" height="22">
                     </span>
@@ -12,7 +12,7 @@
                     </span>
                 </a>
 
-                <a href="{{route('backend.index2')}}" class="logo logo-light">
+                <a href="{{route('admin.index2')}}" class="logo logo-light">
                     <span class="logo-sm">
                         <img src="{{asset('backend/images/logo-sm.png')}}" alt="logo-sm-light" height="22">
                     </span>
@@ -380,7 +380,10 @@
                     <a class="dropdown-item d-block" href="#"><span class="badge bg-success float-end mt-1">11</span><i class="ri-settings-2-line align-middle me-1"></i> Settings</a>
                     <a class="dropdown-item" href="#"><i class="ri-lock-unlock-line align-middle me-1"></i> Lock screen</a>
                     <div class="dropdown-divider"></div>
-                    <a class="dropdown-item text-danger" href="#"><i class="ri-shut-down-line align-middle me-1 text-danger"></i> Logout</a>
+                    <a class="dropdown-item text-danger" href="javascript:void(0)" onclick="event.preventDefault();document.getElementById('logout-form').submit();"><i class="ri-shut-down-line align-middle me-1 text-danger"></i> Logout</a>
+                    <form action="{{route('logout')}}" method="POST" id="logout-form" class="d-none">
+                        @csrf
+                    </form>
                 </div>
             </div>
 

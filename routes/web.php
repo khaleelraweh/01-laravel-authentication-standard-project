@@ -17,12 +17,37 @@ Route::get('/shop',     [FrontendController::class,'shop'])->name('frontend.shop
 
 
 //Backend
-Route::get('/admin', [BackendController::class,'index'])->name('backend.index');
-Route::get('/admin/index', [BackendController::class,'index'])->name('backend.index2');
-Route::get('/admin/login', [BackendController::class,'login'])->name('backend.auth-login');
-Route::get('/admin/register', [BackendController::class,'register'])->name('backend.auth-register');
-Route::get('/admin/recover-password', [BackendController::class,'recover_password'])->name('backend.auth-recover-password');
-Route::get('/admin/lock-screen', [BackendController::class,'lock_screen'])->name('backend.auth-lock-screen');
+
+
+Route::group(['prefix'=>'admin' , 'as' =>'admin.'],function(){
+    
+    //guest to website 
+    Route::group(['middleware'=>'guest'],function(){
+        Route::get('/login', [BackendController::class,'login'])->name('auth-login');
+        Route::get('/register', [BackendController::class,'register'])->name('auth-register');
+        Route::get('/lock-screen', [BackendController::class,'lock_screen'])->name('auth-lock-screen');
+        Route::get('/recover-password', [BackendController::class,'recover_password'])->name('auth-recover-password');
+
+    });
+
+    //uthenticate to website 
+    Route::group(['middleware'=>['auth']],function(){
+        Route::get('/', [BackendController::class,'index'])->name('index');
+        Route::get('/index', [BackendController::class,'index'])->name('index2');
+    });
+    
+});
+
+
+
+
+
+
+
+
+
+
+        
 
 
 

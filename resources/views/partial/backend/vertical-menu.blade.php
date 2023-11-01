@@ -20,7 +20,7 @@
                 <li class="menu-title">Menu</li>
 
                 <li>
-                    <a href="{{route('backend.index2')}}" class="waves-effect">
+                    <a href="{{route('admin.index2')}}" class="waves-effect">
                         <i class="ri-dashboard-line"></i><span class="badge rounded-pill bg-success float-end">3</span>
                         <span>Dashboard</span>
                     </a>
@@ -83,10 +83,10 @@
                         <span>Authentication</span>
                     </a>
                     <ul class="sub-menu" aria-expanded="false">
-                        <li><a href="{{route('backend.auth-login')}}">Login</a></li>
-                        <li><a href="{{route('backend.auth-register')}}">Register</a></li>
-                        <li><a href="{{route('backend.auth-recover-password')}}">Recover Password</a></li>
-                        <li><a href="{{route('backend.auth-lock-screen')}}">Lock Screen</a></li>
+                        <li><a href="{{route('admin.auth-login')}}">Login</a></li>
+                        <li><a href="{{route('admin.auth-register')}}">Register</a></li>
+                        <li><a href="{{route('admin.auth-recover-password')}}">Recover Password</a></li>
+                        <li><a href="{{route('admin.auth-lock-screen')}}">Lock Screen</a></li>
                     </ul>
                 </li>
 

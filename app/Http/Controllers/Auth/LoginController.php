@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Auth;
 use App\Http\Controllers\Controller;
 use App\Providers\RouteServiceProvider;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
+use Illuminate\Support\Facades\Request;
 
 class LoginController extends Controller
 {
@@ -42,4 +43,17 @@ class LoginController extends Controller
     {
         return 'username'; // اسم الحقل الذي من خلالة سيتم تسجيل الدخول
     }
+
+    public function redirectTo(){
+        if(session('admin')){
+             return $this->redirectTo =  'admin/index';
+        }else{
+            return $this->redirectTo = 'index';
+        }
+
+    }
+
+
+
+
 }
