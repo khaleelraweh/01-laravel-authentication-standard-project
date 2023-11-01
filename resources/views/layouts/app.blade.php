@@ -41,7 +41,7 @@
     <link rel="stylesheet" href="{{asset('frontend/css/custom.css')}}">
     <!-- Favicon-->
     <link rel="shortcut icon" href="{{asset('frontend/img/favicon.png')}}">
-
+    @yield('style')
     
 </head>
 <body>
@@ -70,6 +70,7 @@
     <script src="{{asset('frontend/vendor/swiper/swiper-bundle.min.js')}}"></script>
     <script src="{{asset('frontend/vendor/choices.js/public/assets/scripts/choices.min.js')}}"></script>
     <script src="{{asset('frontend/js/front.js')}}"></script>
+    @yield('script')
     
 </body>
 </html>

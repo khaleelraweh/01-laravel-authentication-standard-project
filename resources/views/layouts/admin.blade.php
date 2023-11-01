@@ -49,6 +49,7 @@
     <!-- App Css-->
     {{-- <link href="{{asset('backend/css/app.min.css')}}" id="app-style" rel="stylesheet" type="text/css" />  --}}
     <link href="{{asset('backend/css/app-rtl.min.css')}}" id="app-style" rel="stylesheet" type="text/css" /> 
+    @yield('style')
 </head>
 <body data-topbar="dark">
 
@@ -126,6 +127,7 @@
 
     <!-- App js -->
     <script src="{{asset('backend/js/app.js')}}"></script>
+    @yield('script')
     
     
 </body>

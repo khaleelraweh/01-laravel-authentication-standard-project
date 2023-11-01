@@ -35,7 +35,7 @@
     <link href="{{asset('backend/css/icons-rtl.min.css')}}" rel="stylesheet" type="text/css" />
     <!-- App Css-->
     <link href="{{asset('backend/css/app-rtl.min.css')}}" id="app-style" rel="stylesheet" type="text/css" />
-
+    @yield('style')
 </head>
 <body class="auth-body-bg">
 
@@ -57,5 +57,6 @@
   <script src="{{asset('backend/libs/node-waves/waves.min.js')}}"></script>
 
   <script src="{{asset('backend/js/app.js')}}"></script>
+  @yield('script')
 </body>
 </html>
